@@ -26,7 +26,15 @@
     }
 
     main {
+      position: relative;
       text-align: center;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,0);
     }
 
     #logo {
@@ -81,16 +89,20 @@
 
 <body>
   <main>
-    <a id="logo" href="/">
-      <img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="to home" />
-    </a>
-    <div id="error">
-      <h1>页面不可访问，请检查网络设置</h1>
-      <h2 style="text-align: left;">404 NOT FOUND</h2>
-      <p style="text-align: left;">
-        <a href="/">首页</a>
-        <a onClick="history.back();">上一页</a>
-      </p>
+    <div class="container">
+      <a id="logo" href="/">
+        <img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="to home" />
+      </a>
+      <div id="error">
+        <h1>神经连接已断开，请重试</h1>
+        <div style="display: flex;justify-content: space-between">
+          <p style="font-weight: 700;font-size: 20px">404 NOT FOUND</p>
+          <p>
+            <a href="/">首页</a>
+            <a onClick="history.back();">上一页</a>
+          </p>
+        </div>
+      </div>
     </div>
   </main>
 
